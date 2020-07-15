@@ -10,13 +10,12 @@ Resources:
       Description: ''
       MemorySize: 128
       Timeout: 15
-      CodeUri: s3://josephshih-sar-bucket/df446d726cac4a2f1ababe6d0e9ac23d
+      CodeUri: s3://josephshih-sar-bucket/576bafe96992b240d1bcfbf5804820d2
       Policies: AmazonEC2FullAccess
-      Events: 
+      Events:
         CWSchedule:
           Type: Schedule
           Properties:
-            Schedule: 'cron(0 0 ? * TUE,FRI *)'
+            Schedule: cron(0 0 ? * TUE,FRI *)
             Name: TestSchedule
             Description: test schedule
-  

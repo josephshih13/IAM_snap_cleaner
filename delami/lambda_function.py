@@ -45,7 +45,7 @@ def del_ami():
         # print ami['ImageId'], ami['CreationDate']
         day_old = days_old2(create_date)
         if day_old > age:
-            print("deleting -> " + snap_id + " - create_date = " + create_date)
+            print("deleting -> " + snap_id)
             # deregister the AMI
             client.delete_snapshot(snap_id)
 

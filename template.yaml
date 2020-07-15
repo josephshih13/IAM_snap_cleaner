@@ -12,3 +12,11 @@ Resources:
       Timeout: 15
       CodeUri: .debug/
       Policies: AmazonEC2FullAccess
+      Events: 
+        CWSchedule:
+          Type: Schedule
+          Properties:
+            Schedule: 'cron(0 0 ? * TUE,FRI *)'
+            Name: TestSchedule
+            Description: test schedule
+  
