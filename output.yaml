@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  delami:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: delami/lambda_function.lambda_handler
+      Runtime: python3.6
+      Description: ''
+      MemorySize: 128
+      Timeout: 15
+      CodeUri: s3://josephshih-sar-bucket/df446d726cac4a2f1ababe6d0e9ac23d
+      Policies: AmazonEC2FullAccess
