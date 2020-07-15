@@ -10,7 +10,7 @@ Resources:
       Description: ''
       MemorySize: 128
       Timeout: 15
-      CodeUri: s3://josephshih-sar-bucket/576bafe96992b240d1bcfbf5804820d2
+      CodeUri: s3://josephshih-sar-bucket/12948a979d1e5b21eaf11a825e32b574
       Policies: AmazonEC2FullAccess
       Events:
         CWSchedule:
