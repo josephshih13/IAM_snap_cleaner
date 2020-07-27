@@ -1,22 +1,21 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
+Transform: AWS::Serverless-2016-10-31
 Description: An AWS Serverless Specification template describing your function.
 Resources:
   delami:
-    Type: 'AWS::Serverless::Function'
+    Type: AWS::Serverless::Function
     Properties:
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
       Description: ''
       MemorySize: 128
       Timeout: 15
-      CodeUri: delami/
+      CodeUri: s3://josephshih-sar-bucket/71aec468ccc3eea51a4b9e77a53a5f22
       Policies: AmazonEC2FullAccess
-      Events: 
+      Events:
         CWSchedule:
           Type: Schedule
           Properties:
-            Schedule: 'cron(0 0 ? * TUE,FRI *)'
+            Schedule: cron(0 0 ? * TUE,FRI *)
             Name: TestSchedule
             Description: test schedule
-  
